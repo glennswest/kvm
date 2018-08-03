@@ -5,7 +5,12 @@ and choose /28 subnet
 
 ## KVM Setup on Centos 7
 This is designed for use on Packet.Net EpyC Hardware as a service
+  yum  install -y qemu-kvm qemu-img virt-manager libvirt libvirt-python libvirt-client virt-install virt-viewer bridge-utils
+  yum install -y  "@X Window System" xorg-x11-xauth xorg-x11-fonts-* xorg-x11-utils -y
+  yum install -y dhcp
 
+
+## Setup the bonded bridge
 Edit the bond0 ifcfg
  /etc/sysconfig/network-scripts/ifcfg-bond0  (Example in:  etc/sysconfig/network-scripts/ifcfg-bond0)
 
@@ -19,6 +24,7 @@ bridge name	bridge id		STP enabled	interfaces
 br0		8000.ec0d9abf3d58	no		bond0
 							vnet0
 
+## Setup dhcp
 Add dhcp support to host for packet.net range
 Example: etc/dhcp/dhcpd.conf
 
