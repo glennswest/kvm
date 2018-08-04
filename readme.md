@@ -40,9 +40,6 @@ br0		8000.ec0d9abf3d58	no		bond0
 Add dhcp support to host for packet.net range
 Example: etc/dhcp/dhcpd.conf
 
-## Enable Nested in RHEL VM
-Edit the rhel75 image and make sure cpu mode is host-model
-https://www.linuxtechi.com/enable-nested-virtualization-kvm-centos-7-rhel-7/
 
 ## Verify nested virt in guest vm
 ssh into guest vm, and use lsmod, and lscpu to verify nested virt
@@ -96,4 +93,12 @@ Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca 
 ### initialvm.sh - Use o rhel75 iso to install a rhel 75 image
 This script takes a rhel75 iso image of the complete os and creates a thin vm. Once its created, a subscription needs to be added, and any extranious rhn repos removed.
 It should be set up to use dhcp.
+
+## References:
+KVM Install
+https://www.linuxtechi.com/install-kvm-hypervisor-on-centos-7-and-rhel-7/
+Cloning
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/cloning-a-vm
+Nested Virt
+https://www.linuxtechi.com/enable-nested-virtualization-kvm-centos-7-rhel-7/
 
