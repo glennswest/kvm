@@ -101,4 +101,6 @@ Cloning
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/cloning-a-vm
 Nested Virt
 https://www.linuxtechi.com/enable-nested-virtualization-kvm-centos-7-rhel-7/
+Windows
+https://medium.com/@piecritic/how-i-learned-to-stop-crying-and-install-windows-server-on-kvm-9e56fe1a8740
 
