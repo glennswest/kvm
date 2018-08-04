@@ -99,6 +99,10 @@ win2016 bsod install workaround
 
 https://gist.github.com/jorritfolmer/d01194a00f440ad257bd56d51baddc2d
 
+Extraneous messages:
+https://patchwork.kernel.org/patch/10048427/
+Add supress_ignore_msrs_prints as well
+
 ## References:
 KVM Install
 https://www.linuxtechi.com/install-kvm-hypervisor-on-centos-7-and-rhel-7/
