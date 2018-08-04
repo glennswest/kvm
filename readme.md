@@ -94,6 +94,11 @@ Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca 
 This script takes a rhel75 iso image of the complete os and creates a thin vm. Once its created, a subscription needs to be added, and any extranious rhn repos removed.
 It should be set up to use dhcp.
 
+## BUGS
+win2016 bsod install workaround
+
+https://gist.github.com/jorritfolmer/d01194a00f440ad257bd56d51baddc2d
+
 ## References:
 KVM Install
 https://www.linuxtechi.com/install-kvm-hypervisor-on-centos-7-and-rhel-7/
@@ -103,4 +108,5 @@ Nested Virt
 https://www.linuxtechi.com/enable-nested-virtualization-kvm-centos-7-rhel-7/
 Windows
 https://medium.com/@piecritic/how-i-learned-to-stop-crying-and-install-windows-server-on-kvm-9e56fe1a8740
+
 
