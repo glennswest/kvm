@@ -88,11 +88,23 @@ Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca 
 [root@openshift ~]# 
 
 
+## Adding VirtIO Drivers
+virsh change-media  win1709 hda /usr/share/virtio-win/virtio-win-0.1.149.iso
+
+
 ## Scripts
 
 ### initialvm.sh - Use o rhel75 iso to install a rhel 75 image
 This script takes a rhel75 iso image of the complete os and creates a thin vm. Once its created, a subscription needs to be added, and any extranious rhn repos removed.
 It should be set up to use dhcp.
+
+## Improving Perfomance
+Using virtio drivers will significantly improve perofmance in a kvm environment:
+
+wget https://fedorapeople.org/groups/virt/virtio-win/virtio-win.repo   -O /etc/yum.repos.d/virtio-win.repo
+yum install virtio-win
+yum --enablerepo=virtio-win-latest upgrade virtio-win
+
 
 ## BUGS
 win2016 bsod install workaround
@@ -112,5 +124,7 @@ Nested Virt
 https://www.linuxtechi.com/enable-nested-virtualization-kvm-centos-7-rhel-7/
 Windows
 https://medium.com/@piecritic/how-i-learned-to-stop-crying-and-install-windows-server-on-kvm-9e56fe1a8740
+Adding VirtIO to a existing Image
+https://easyengine.io/tutorials/kvm/enable-virtio-existing-vms/
 
 
