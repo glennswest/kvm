@@ -94,6 +94,13 @@ virsh change-media  win1709 hda /usr/share/virtio-win/virtio-win-0.1.149.iso
 
 ## Scripts
 
+### restore-image.sh
+This allows the restore of a saved kvm image via azure using azcopy. Install azcopy first, before using the scripts.
+The blob acct must be set to restore the image
+
+[root@kvm kvm]# echo $BLOB_ACCT
+hybridkvm.blob.core.windows.net
+
 ### initialvm.sh - Use o rhel75 iso to install a rhel 75 image
 This script takes a rhel75 iso image of the complete os and creates a thin vm. Once its created, a subscription needs to be added, and any extranious rhn repos removed.
 It should be set up to use dhcp.
